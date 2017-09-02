@@ -53,11 +53,14 @@ Todos os balões, antes de serem lançados, conhecem a localização de todas as
 
 ### Requisitos do projeto
 
+* Crie um projeto gradle Java com a IDE IntelliJ
+  * Marque a opção `Use auto-import`
+  * Em `Project Location` escolha o diretório onde você fez o clone desse repositório do github classroom
 * Arquivo `.gitignore`  para excluir arquivos do gradle, Java, Linux e Jetbrains IDE (IntelliJ)
 * Arquivo **LICENSE** para indicar o licenciamento do código
 * Testes de unidade com [JUnit4](https://github.com/junit-team/junit4/wiki/Assertions) para validar as implementações das principais classes
 * Respeitar o conceito de encapsulamento, fazendo uso adequado dos modificadores de acesso
-* Documentar os principais métodos com seguindo a sintaxe do JavaDOC
+* Documentar os principais métodos seguindo a sintaxe do JavaDOC
 
 
 
