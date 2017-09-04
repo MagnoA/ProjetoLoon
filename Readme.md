@@ -1,6 +1,6 @@
-**ToDo** - Adicione seu Nome Sobrenome aqui
+**ToDo** - Allex Magno Andrade
 
-**ToDo** - Adicione um emblema (*badge*) do travis CI aqui  [![Build Status](https://travis-ci.com/poo29004-201702/lista-02-XXXXX.svg?token=cpUWzuHDAsm6MQZ16ReK&branch=master)](https://travis-ci.com/poo29004-201702/lista-02-XXXXX)
+**ToDo** -https://travis-ci.com/POO29004-201702/lista-02-MagnoA.svg?token=y5SJj8AQ68rpr7NGNDQ9&branch=master
 
 ### Programação Orientada a Objetos - POO29004
 
