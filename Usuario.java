@@ -5,16 +5,15 @@ public class Usuario {
 	private double longitude;
 
 	public Usuario(double lat, double lon) {
-		latitude = lat;
-		longitude = lon;
+
 	}
 
 	public double getLatitude() {
-		return latitude;
+		return 0;
 	}
 
 	public double getLongitude() {
-		return longitude;
+		return 0;
 	}
 
 }

@@ -1,46 +1,72 @@
-import sun.reflect.annotation.TypeAnnotation;
-
-import javax.xml.stream.Location;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Balao {
 
-	private static int identificador;
+	private static int marcador;
 	private int iD;
 
 	private  double latitude;
-	private  double longitidue;
+	private  double longitude;
 
-	private LinkedList<ERB> list;
+	private ERB erb;
+	private  boolean upLink;
 
-	private boolean upLink;
+	private Balao vizinho;
 
-	private int vizinho;
+	public Balao(double lat, double longi){
 
-	public Balao(double lat, double longi, LinkedList<ERB> l){
-		iD = identificador;
-		identificador++;
-		if(identificador>1) vizinho = identificador -1;
+		iD = marcador;
 		latitude = lat;
-		longitidue = longi;
+		longitude = longi;
+		marcador++;
+	}
 
-		list = l;
-
-
-
+	public Balao(double lat, double longi, Balao b){
+		iD = marcador;
+		latitude = lat;
+		longitude = longi;
+		vizinho = b;
+		marcador++;
 	}
 
 	public String toString() {
-		return  list.get(0).toString();
+		String info = "Balão(" + iD + ")_(" + latitude +", "+ longitude +")";
+		if(upLink) info = info + " conectado a ERB "+ erb.toString();
+		if(iD >= 1) return info + " e vizinho Balão("+vizinho.getiD()+")";
+		else
+		return info;
 	}
 
-	public void movimentacao(String novaPosicao) {
-
+	public double getLatitude(){
+		return latitude;
 	}
 
-	public boolean sendMenssage(String posicao) {
-		return false;
+	public double getLongitude() {
+		return longitude;
 	}
 
+	public void move(double novaLongitude) {
+
+		longitude += novaLongitude;
+	}
+
+	public String sendMenssage() {
+		if(upLink){
+			return this.toString();
+		}
+		else{
+			//System.out.println(this.toString());
+			if(vizinho != null) return " "+ vizinho.sendMenssage();
+			else return "Sem rede";
+		}
+	}
+
+	public int getiD(){
+		return iD;
+	}
+
+	public void conectar(ERB base){
+		erb = base;
+		upLink = true;
+	}
+
+	public boolean coneccaoInfo(){return upLink;}
 }

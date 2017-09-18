@@ -1,4 +1,4 @@
-**ToDo** - Allex Magno Andrade
+**Allex Magno Andrade**
 
 [![Build Status](https://travis-ci.com/POO29004-201702/lista-02-MagnoA.svg?token=y5SJj8AQ68rpr7NGNDQ9&branch=master)](https://travis-ci.com/POO29004-201702/lista-02-MagnoA)
 ### Programação Orientada a Objetos - POO29004
