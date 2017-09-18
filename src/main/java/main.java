@@ -12,7 +12,7 @@ public class main {
 
 
         Usuario usuario = new Usuario(0,0);
-        Menu menu = new Menu(r, b);
+        Menu menu = new Menu(r, b, usuario);
 
         Scanner ler = new Scanner(System.in);
 
@@ -33,21 +33,15 @@ public class main {
                     System.out.print("Longitude: ");
                     double lon = ler.nextDouble();
 
-                    if(menu.cadastrarERB(lat, lon)){
-                        System.out.println("Cadastrado!");
-                    }else{
+                    if(!menu.cadastrarERB(lat, lon))
                         System.out.println("Erro!");
-                    }
                     break;
 
                 case 2:
                     System.out.print("ID: ");
                     int id = ler.nextInt();
-                    if (menu.removerERB(id)){
-                        System.out.println("removido com sucesso!");
-                    }else{
+                    if (!menu.removerERB(id))
                         System.out.println("Erro!");
-                    }
                     break;
 
                 case 3:
@@ -60,11 +54,8 @@ public class main {
                     System.out.print("Longitude: ");
                     double lon1 = ler.nextDouble();
 
-                    if(menu.lancarBalao(lat1, lon1)){
-                        System.out.println("Cadastrado!");
-                    }else{
-                        System.out.println("Error!");
-                    }
+                    if(!menu.lancarBalao(lat1, lon1))
+                       System.out.println("Erro!");
                     break;
 
                 case 5:
@@ -84,11 +75,7 @@ public class main {
                     break;
 
                 case 8:
-                    System.out.println(menu.enviarMensagem(usuario));
-                    break;
-
-                case 9:
-                    System.out.println(menu.atualizar());
+                    System.out.println(menu.enviarMensagem());
                     break;
 
                 default:
