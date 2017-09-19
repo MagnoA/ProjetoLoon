@@ -75,10 +75,10 @@ public class Balao {
 	 */
 	public String sendMenssage() {
 		if (upLink) {
-			return this.toString();
+			return "Balão("+iD+")";
 		} else {
 			System.out.println(toString());
-			if (vizinho != null) return vizinho.sendMenssage();
+			if (vizinho != null) return "Balão("+iD+") "+vizinho.sendMenssage();
 			else return "Falha na conexão";
 		}
 	}
